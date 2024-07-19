@@ -2,4 +2,3 @@ numpy
 boto3
 tts
 openai
-python-dotenv

@@ -26,18 +26,8 @@ assistant_id = os.getenv('assistant_id')
 current_dir = os.path.dirname(__file__)
 data_dir = os.path.abspath(os.path.join(current_dir, '..', '..', 'Data'))
 
-file_script_path = os.path.join(data_dir, '셜록 대사_스크립트.pdf')
-file_personality_path = os.path.join(data_dir, '셜록 베네딕트 컴버배치_말투특징.pdf')
-
-file_script = client.files.create(
-    file=open(file_script_path, "rb"),
-    purpose="assistants",
-)
-
-file_personality = client.files.create(
-    file=open(file_personality_path, "rb"),
-    purpose="assistants",
-)
+file_script_path = os.path.join(data_dir, '셜록 대사_스크립트_뉴(전체).pdf')
+file_personality_path = os.path.join(data_dir, '셜록 베네딕트 컴버배치_말투특징_뉴(영어).pdf')
 
 def get_user_input():
     return sys.argv[1] if len(sys.argv) > 1 else "기본 메시지"
